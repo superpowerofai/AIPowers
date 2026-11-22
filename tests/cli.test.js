@@ -1,0 +1,12 @@
+﻿import test from 'node:test';
+import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const cli = fileURLToPath(new URL('../src/cli.js', import.meta.url));
+const run = (...args) => spawnSync(process.execPath, [cli, ...args], { encoding: 'utf8' });
+test('help identifies AIPowers', () => { const r = run('help'); assert.equal(r.status, 0); assert.match(r.stdout, /Original AI Agent Ecosystem/); });
+test('version is reported', () => { const r = run('version'); assert.equal(r.status, 0); assert.equal(r.stdout.trim(), '0.1.0'); });
+test('doctor checks runtime', () => { const r = run('doctor'); assert.equal(r.status, 0); assert.match(r.stdout, /Node.js:/); });
+test('agents lists original platform modules', () => { const r = run('agents'); assert.equal(r.status, 0); assert.match(r.stdout, /Workflow Orchestrator/); });
+test('unknown command exits nonzero', () => { const r = run('nope'); assert.equal(r.status, 2); });
