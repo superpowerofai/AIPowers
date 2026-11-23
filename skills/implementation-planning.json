@@ -1,0 +1,14 @@
+{
+  "id": "implementation-planning",
+  "name": "Implementation Planning",
+  "description": "Convert an approved design into small, ordered, verifiable implementation tasks.",
+  "triggers": [
+    "implementation plan",
+    "break down tasks",
+    "plan implementation",
+    "task dependencies",
+    "technical plan"
+  ],
+  "instructions": "Start from an approved design and inspect the repository. Break work into small tasks with exact files, intended changes, dependencies, and verification commands. Order tasks so prerequisites come first. Identify risks and unknowns. Do not claim a task is complete until its verification evidence is recorded.",
+  "priority": 60
+}

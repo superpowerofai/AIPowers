@@ -1,0 +1,15 @@
+{
+  "id": "verification-before-completion",
+  "name": "Verification Before Completion",
+  "description": "Require fresh, relevant evidence before reporting work as complete.",
+  "triggers": [
+    "verify",
+    "verification",
+    "check before completion",
+    "prove it works",
+    "run tests",
+    "validate implementation"
+  ],
+  "instructions": "Before reporting completion, identify the exact claims being made and run the commands that verify them. Inspect exit codes and relevant output. Distinguish implemented, tested, and independently verified behavior. Report failures and unverified areas honestly. Never infer success from code inspection alone.",
+  "priority": 100
+}

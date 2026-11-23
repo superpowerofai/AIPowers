@@ -1,0 +1,14 @@
+{
+  "id": "brainstorming",
+  "name": "Requirements Discovery & Brainstorming",
+  "description": "Clarify intent, constraints, users, and success criteria before proposing a design.",
+  "triggers": [
+    "brainstorm",
+    "unclear requirements",
+    "explore options",
+    "product idea",
+    "feature idea"
+  ],
+  "instructions": "Before implementation: inspect the existing project context. Clarify the user's actual goal, constraints, users, and definition of success. Ask one focused question at a time when essential information is missing. Present a small set of materially different approaches with trade-offs. Do not start implementation until the user approves the chosen direction.",
+  "priority": 50
+}
