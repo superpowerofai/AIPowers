@@ -21,7 +21,7 @@ function fixture() {
 function fakeSpawn({ code = 0, stdout = '{"type":"turn.completed"}', stderr = '', pid } = {}) {
   let prompt = '';
   const spawnImpl = (command, args, options) => {
-    assert.equal(command, 'codex.exe');
+    assert.match(command, /^codex(?:[.]exe)?$/);
     assert.ok(args.includes('--ephemeral'));
     assert.ok(args.includes('--sandbox'));
     assert.ok(args.includes('workspace-write'));
